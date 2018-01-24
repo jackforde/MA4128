@@ -51,4 +51,10 @@ diamtest %>% dim()
 #predicting price by all other variables - use randomForest
 pricemodel<-randomForest(price~.,data=diamtrain)
 pricemodel<-lm(price~.,data=diamtrain)
-pricemodel
+rmse(pricemodel,diamtrain)
+pricemodel<-lm(price~.,data=diamtest)
+rmse(pricemodel,diamtest)
+mae(pricemodel,diamtrain)
+mae(pricemodel,diamtest)
+rsquare(pricemodel,diamtrain)
+rsquare(pricemodel,diamtest)
