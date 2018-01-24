@@ -1,47 +1,10 @@
-sessionInfo()
-mtcarsmtcars %>% dim()
-mtcars %>% nrow()
-mtcars %>% ncol()
-mtcars %>% names()
-mtcars %>% class()
-mtcars %>% summary()
-iris%>%glimpse()
-iris2 <- iris %>% filter(Sepal.Length>5.2)
-iris2 %>% dim()
-iris3 <- iris %>% filter(Sepal.Length>5.4)
-iris3 %>% dim()
-iris4 <- iris %>% filter(Sepal.Length>5.6)
-iris4 %>% dim()
-history()
 install.packages("dplyr")library(dplyr)
 #Q1 - what versions are tibble, magritr, dplyr?sessionInfo()
 #Q2 - pick out first 5mtcars %>% dim()mtcars %>% nrow()mtcars %>% ncol()mtcars %>% names()mtcars %>% class()mtcars %>% summary()
 #Q3 - how many greater than x?iris%>%glimpse()iris2 <- iris %>% filter(Sepal.Length>5.2)iris2 %>% dim()iris3 <- iris %>% filter(Sepal.Length>5.4)iris3 %>% dim()iris4 <- iris %>% filter(Sepal.Length>5.6)iris4 %>% dim()
-#Q4iris %>% group_by(Species)%>% summarise(meanSL=mean(Sepal.Length), varSL=var(Sepal.Length), sdSL=sd(Sepal.Length), medianSL=median(Sepal.Length))
+#Q4 goup by summariseiris %>% group_by(Species)%>% summarise(meanSL=mean(Sepal.Length), varSL=var(Sepal.Length), sdSL=sd(Sepal.Length), medianSL=median(Sepal.Length))
 #Q5 - mtcars, group by cyl, median mpgmtcars %>% group_by(vs,am)%>% summarise(medianMPG=median(mpg))
 #Q6 sqrt QSECmtcars %>% select(1:drat)mtcars %>% select(2:4,everything())mtcars %>% mutate(sqrtQSEC = sqrt(qsec))
 mtcars %>% mutate(sqrtMPG = sqrt(mpg),logMPG=log(mpg)) %>%   select(mpg,sqrtMPG,logMPG,everything()) %>% head()
-install.packages("dplyr")library(dplyr)
-#Q1 - what versions are tibble, magritr, dplyr?sessionInfo()
-#Q2 - pick out first 5mtcars %>% dim()mtcars %>% nrow()mtcars %>% ncol()mtcars %>% names()mtcars %>% class()mtcars %>% summary()
-#Q3 - how many greater than x?iris%>%glimpse()iris2 <- iris %>% filter(Sepal.Length>5.2)iris2 %>% dim()iris3 <- iris %>% filter(Sepal.Length>5.4)iris3 %>% dim()iris4 <- iris %>% filter(Sepal.Length>5.6)iris4 %>% dim()
-#Q4iris %>% group_by(Species)%>% summarise(meanSL=mean(Sepal.Length), varSL=var(Sepal.Length), sdSL=sd(Sepal.Length), medianSL=median(Sepal.Length))
-#Q5 - mtcars, group by cyl, median mpgmtcars %>% group_by(vs,am)%>% summarise(medianMPG=median(mpg))
-#Q6 sqrt QSECmtcars %>% select(1:drat)mtcars %>% select(2:4,everything())mtcars %>% mutate(sqrtQSEC = sqrt(qsec))
-mtcars %>% mutate(sqrtMPG = sqrt(mpg),logMPG=log(mpg)) %>%   select(mpg,sqrtMPG,logMPG,everything()) %>% head()
-install.packages("dplyr")library(dplyr)
-#Q1 - what versions are tibble, magritr, dplyr?sessionInfo()
-#Q2 - pick out first 5mtcars %>% dim()mtcars %>% nrow()mtcars %>% ncol()mtcars %>% names()mtcars %>% class()mtcars %>% summary()
-#Q3 - how many greater than x?iris%>%glimpse()iris2 <- iris %>% filter(Sepal.Length>5.2)iris2 %>% dim()iris3 <- iris %>% filter(Sepal.Length>5.4)iris3 %>% dim()iris4 <- iris %>% filter(Sepal.Length>5.6)iris4 %>% dim()
-#Q4iris %>% group_by(Species)%>% summarise(meanSL=mean(Sepal.Length), varSL=var(Sepal.Length), sdSL=sd(Sepal.Length), medianSL=median(Sepal.Length))
-#Q5 - mtcars, group by cyl, median mpgmtcars %>% group_by(vs,am)%>% summarise(medianMPG=median(mpg))
-#Q6 sqrt QSECmtcars %>% select(1:drat)mtcars %>% select(2:4,everything())mtcars %>% mutate(sqrtQSEC = sqrt(qsec))
-mtcars %>% mutate(sqrtMPG = sqrt(mpg),logMPG=log(mpg)) %>%   select(mpg,sqrtMPG,logMPG,everything()) %>% head()
-
-
-
-
-
-
 
 
