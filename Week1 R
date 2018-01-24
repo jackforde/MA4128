@@ -43,3 +43,12 @@ mtcars %>% mutate(sqrtMPG = sqrt(mpg),logMPG=log(mpg)) %>% 
 data(diamonds)
 diamonds %>%dim()
 diamonds %>%names()
+diamtrain <- diamonds %>% sample_frac(0.30)
+diamtest <- diamonds %>% sample_frac(0.10)
+diamtrain %>% dim()
+diamtest %>% dim()
+
+#predicting price by all other variables - use randomForest
+pricemodel<-randomForest(price~.,data=diamtrain)
+pricemodel<-lm(price~.,data=diamtrain)
+pricemodel
