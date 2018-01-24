@@ -39,4 +39,7 @@ mtcars %>% mutate(sqrtQSEC = sqrt(qsec))
 mtcars %>% mutate(sqrtMPG = sqrt(mpg),logMPG=log(mpg)) %>% 
   select(mpg,sqrtMPG,logMPG,everything()) %>% head()
 
-
+#github - MA4128 - Setup3.R
+data(diamonds)
+diamonds %>%dim()
+diamonds %>%names()
